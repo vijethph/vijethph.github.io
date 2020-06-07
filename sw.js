@@ -5,7 +5,7 @@ var URLS = [                            // Add URL you want to cache in this lis
   '/',                     // If you have separate JS/CSS files,
   '/index.html',            // add path to those files here
   '/assets/',
-  '/css/styles.css'
+  '/css/styles.css',
   '/js/scripts.js'
 ]
 
