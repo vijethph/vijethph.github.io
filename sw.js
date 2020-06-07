@@ -3,7 +3,9 @@ var VERSION = 'version_02'              // Version of the off-line cache (change
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
   '/',                     // If you have separate JS/CSS files,
-  '/index.html'            // add path to those files here
+  '/index.html',            // add path to those files here
+  '/app.js',
+  '/sw.js'
 ]
 
 // Respond with cached resources
