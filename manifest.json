@@ -4,46 +4,46 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#1446a0",
-  "theme_color": "#F5D547", 
+  "theme_color": "#F5D547",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/img/icons/android-icon-72x72.png",
-      "type": "image/png", 
+      "src": "/assets/img/icons/android-icon-72x72.png",
+      "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "/img/icons/android-icon-96x96.png",
+      "src": "/assets/img/icons/android-icon-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "/img/icons/apple-icon-120x120.png",
+      "src": "/assets/img/icons/apple-icon-120x120.png",
       "type": "image/png",
       "sizes": "120x120"
     },
     {
-      "src": "/img/icons/ms-icon-144x144.png",
+      "src": "/assets/img/icons/ms-icon-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "/img/icons/apple-icon-152x152.png",
+      "src": "/assets/img/icons/apple-icon-152x152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "/img/icons/android-icon-192x192.png",
+      "src": "/assets/img/icons/android-icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icons/ms-icon-310x310.png",
+      "src": "/assets/img/icons/ms-icon-310x310.png",
       "type": "image/png",
       "sizes": "310x310"
     },
     {
-      "src": "/img/icons/ms-icon-512x512.png",
+      "src": "/assets/img/icons/ms-icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
