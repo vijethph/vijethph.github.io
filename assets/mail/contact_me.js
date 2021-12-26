@@ -13,6 +13,8 @@ $(function () {
       var email = $("input#email").val();
       var phone = $("input#phone").val();
       var message = $("textarea#message").val();
+      var accessKey = $("input#accessKey").val();
+      var honeypot = $("input#honeypot").val();
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(" ") >= 0) {
@@ -20,6 +22,30 @@ $(function () {
       }
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+      
+      var sendObj = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+        accessKey: accessKey,
+        honeypot: honeypot
+      };
+      
+      $.ajax({
+            url: 'https://api.staticforms.xyz/submit', // url where to submit the request
+            type: "POST", // type of action POST || GET
+            dataType: 'json', // data type
+            data: sendObj, // post data || get data
+            success: function(result) {
+                // you can see the result from the console
+                // tab of the developer tools
+                console.log(result);
+            },
+            error: function(xhr, resp, text) {
+                console.log(xhr, resp, text);
+            }
+     });
 
       // Success message
       $("#success").html("<div class='alert alert-success'>");
