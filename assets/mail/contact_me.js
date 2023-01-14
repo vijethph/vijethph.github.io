@@ -5,17 +5,12 @@ $(function () {
     preventSubmit: true,
     submitError: function ($form, event, errors) {
       // additional error messages or events
+      console.error($form, event, errors);
     },
     submitSuccess: function ($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
-      var accessKey = $("input#accessKey").val();
-      var honeypot = $("input#honeypot").val();
-      var firstName = name; // For Success/Failure Message
+      let firstName = $("input#name").val(); // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(" ") >= 0) {
         firstName = name.split(" ").slice(0, -1).join(" ");
@@ -23,13 +18,13 @@ $(function () {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       
-      var sendObj = {
-        name: name,
-        email: email,
-        phone: phone,
-        message: message,
-        accessKey: accessKey,
-        honeypot: honeypot
+      const sendObj = {
+        name: $("input#name").val(),
+        email: $("input#email").val(),
+        phone: $("input#phone").val(),
+        message: $("textarea#message").val(),
+        accessKey: $("input#accessKey").val(),
+        honeypot: $("input#honeypot").val()
       };
       
       $.ajax({
